@@ -11,12 +11,13 @@ const priceReducer = (preState, action) =>{
 
 // export default function Apple
 function Apple(){
-    // const [price, setPrice] = useState(0);
-    const [price, priceDispatch] = useReducer(priceReducer, 0);
+    const [price, setPrice] = useState(0);
+    // const [price, priceDispatch] = useReducer(priceReducer, 0);
     useEffect(()=>{
-        priceDispatch({type : 'ADD'});
-        priceDispatch({type : 'ADD'});
-        priceDispatch({type : 'ADD'});
+        setPrice(price +10);
+        setPrice(price +10);
+        setPrice(price +10);
+        // priceDispatch({type : 'ADD'});
         
     },[])
 
@@ -26,7 +27,8 @@ function Apple(){
 
 
     const handleClick = e =>{
-        priceDispatch({type : 'ADD'});
+        setPrice(price +10);
+        // priceDispatch({type : 'ADD'});
         
     }
     
